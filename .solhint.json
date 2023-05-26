@@ -1,3 +1,6 @@
 {
-  "extends": "solhint:recommand"
+  "extends": "solhint:recommand",
+  "rules": {
+    "quotes": "single"
+  }
 }

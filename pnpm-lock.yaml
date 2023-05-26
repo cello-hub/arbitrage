@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  '@openzeppelin/contracts':
+    specifier: ^4.9.0
+    version: 4.9.0
+
 devDependencies:
   '@ethersproject/abi':
     specifier: ^5.4.7
@@ -31,6 +36,9 @@ devDependencies:
   '@types/chai':
     specifier: ^4.2.0
     version: 4.3.5
+  '@types/dotenv':
+    specifier: ^8.2.0
+    version: 8.2.0
   '@types/mocha':
     specifier: '>=9.1.0'
     version: 10.0.1
@@ -43,6 +51,9 @@ devDependencies:
   chai:
     specifier: ^4.2.0
     version: 4.3.7
+  dotenv:
+    specifier: ^16.0.3
+    version: 16.0.3
   eslint:
     specifier: ^8.41.0
     version: 8.41.0
@@ -937,6 +948,10 @@ packages:
       - supports-color
     dev: true
 
+  /@openzeppelin/contracts@4.9.0:
+    resolution: {integrity: sha512-DUP74AFGKlic2sQb/CmgrN2aUPMFGxRrmCTUxLHsiU2RzwWqVuMPZBxiAyvlff6Pea77uylAX6B5x9W6evEbhA==}
+    dev: false
+
   /@scure/base@1.1.1:
     resolution: {integrity: sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==}
     dev: true
@@ -1111,6 +1126,13 @@ packages:
     resolution: {integrity: sha512-eHE4cQPoj6ngxBZMvVf6Hw7Mh4jMW4U9lpGmS5GBPB9RYxlFg+CHaVN7ErNY4W9XfLIEn20b4VDYaIrbq0q4uA==}
     dependencies:
       '@types/node': 20.2.4
+    dev: true
+
+  /@types/dotenv@8.2.0:
+    resolution: {integrity: sha512-ylSC9GhfRH7m1EUXBXofhgx4lUWmFeQDINW5oLuS+gxWdfUeW4zJdeVTYVkexEW+e2VUvlZR2kGnGGipAWR7kw==}
+    deprecated: This is a stub types definition. dotenv provides its own type definitions, so you do not need this installed.
+    dependencies:
+      dotenv: 16.0.3
     dev: true
 
   /@types/form-data@0.0.33:
@@ -2206,6 +2228,11 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: true
+
+  /dotenv@16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
     dev: true
 
   /ecc-jsbn@0.1.2:
