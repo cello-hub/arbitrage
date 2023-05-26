@@ -11,5 +11,10 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  rules: {}
+  rules: {
+    '@typescript-eslint/restrict-template-expressions': 0,
+    '@typescript-eslint/strict-boolean-expressions': 0,
+    '@typescript-eslint/ban-ts-comment': 0,
+    '@typescript-eslint/promise-function-async': 0
+  }
 }

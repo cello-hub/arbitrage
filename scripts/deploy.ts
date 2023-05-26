@@ -1,26 +1,19 @@
-import { ethers } from 'hardhat'
+import { ethers, run } from 'hardhat'
 
-async function main(): Promise<void> {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000)
-  const unlockTime = currentTimestampInSeconds + 60
+// WBNB address on BSC, WETH address on ETH
+const WethAddr = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
 
-  const lockedAmount = ethers.utils.parseEther('0.001')
+const main = async (): Promise<void> => {
+  await run('compile')
+  const FlashBot = await ethers.getContractFactory('FlashBot')
+  const flashBot = await FlashBot.deploy(WethAddr)
 
-  const Lock = await ethers.getContractFactory('Lock')
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount })
-
-  await lock.deployed()
-
-  console.log(
-    `Lock with ${ethers.utils.formatEther(
-      lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
-  )
+  console.log(`FlashBot deployed to ${flashBot.address}`)
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
-main().catch((error) => {
-  console.error(error)
-  process.exitCode = 1
-})
+main()
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error(err)
+    process.exit(1)
+  })
