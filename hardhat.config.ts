@@ -6,7 +6,7 @@ const bscRpc = 'https://bsc-dataseed1.defibit.io/'
 const bscTestnetRpc = 'https://data-seed-prebsc-1-s1.binance.org:8545/'
 
 const config: HardhatUserConfig = {
-  solidity: '0.8.20',
+  solidity: '0.8.18',
   networks: {
     hardhat: {
       forking: {
